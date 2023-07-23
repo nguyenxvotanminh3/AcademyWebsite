@@ -14,13 +14,21 @@ public class Students {
     @Id
     @Column(name = "id")
     private String id ;
-
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "roles_key")
     private Roles roles;
     @Column(name = "name")
     private String name;
+
+    @Column(name = "number")
+    private String number;
+
+    @Column(name = "image_url")
+    private String imageUrl;
+
+    @Column(name = "gender")
+    private String gender;
 
     @Column(name = "user_name" , nullable = false)
     private String userName;
